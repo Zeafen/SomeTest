@@ -1,0 +1,26 @@
+﻿<Window x:Class="Project_Ver3._0_.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ResultWindow" Height="585" Width="800"
+        DataContext="{Binding testModel, RelativeSource={RelativeSource Self}}" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid IsSharedSizeScope="True" Margin="3,3,3,3" Name="ResWin">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" x:Name="Conclusion" Margin="10,10,10,10" FontSize="16" FontFamily="Times New Roman" TextWrapping="Wrap"/>
+        <Label x:Name="FirstMistakeslbl" Content="First text Mistakes" Grid.Column="0" Visibility="Hidden" Grid.ColumnSpan="2" Margin="0,38,264,187" Grid.RowSpan="3"/>
+        <Button Grid.Column="1" Grid.Row="3" Background="LightGreen" Content="Restart" Click="Button_Click" Grid.ColumnSpan="2" Margin="264,7,0,0"/>
+        <Button Grid.Column="0" Grid.Row="3" Background="Red" Content="Exit" Click="Button_Click_1" Grid.ColumnSpan="2" Margin="0,7,264,0"/>
+    </Grid>
+</Window>
